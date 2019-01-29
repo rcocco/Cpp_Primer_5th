@@ -160,12 +160,12 @@ for (auto &v : ivec4) {
 另外，即便`beg`和`end`是整型索引，采用前者也比后者要好，因为如果`end`是一个极大的数字，它接近该整型类型所能存储的最大值，此时`beg + end`将有可能导致溢出，计算出的`mid`也将是错误的。  
 
 ## 练习3.27
-> 假设 txt_size 是一个无参数的函数，它的返回值是 int。请回答下列哪个定义是非法的，为什么？
-> unsigned buf_size = 1024;
-> (a) int ia[buf_size];
-> (b) int ia[4 * 7 - 14];
-> (c) int ia[txt_size()];
-> (d) char st[11] = "fundamental";
+> 假设 txt_size 是一个无参数的函数，它的返回值是 int。请回答下列哪个定义是非法的，为什么？  
+> unsigned buf_size = 1024;  
+> (a) int ia[buf_size];  
+> (b) int ia[4 * 7 - 14];  
+> (c) int ia[txt_size()];  
+> (d) char st[11] = "fundamental";  
 
 (a) 是非法的，数组的维度必须是一个常量表达式。  
 (b) 是合法的。  `4 * 7 - 14`是一个常量表达式。
