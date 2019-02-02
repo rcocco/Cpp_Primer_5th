@@ -22,9 +22,7 @@ int main() {
 				else {
 					std::cout << "(no sales)" << std::endl;
 				}
-				total.bookNo = trans.bookNo;
-				total.units_sold = trans.units_sold;
-				total.revenue = trans.revenue;
+				total = trans;
 			}
 		}
 		std::cout << total.bookNo << " " << total.units_sold

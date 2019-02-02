@@ -9,12 +9,11 @@ int main() {
 		Sales_data trans;
 		while (std::cin >> trans.bookNo >> trans.units_sold >> price) {
 			trans.revenue = trans.units_sold * price;
-			if (total.bookNo == trans.bookNo) {
-				total.units_sold += trans.units_sold;
-				total.revenue += trans.revenue;
+			if (total.isbn() == trans.isbn()) {
+				total.combine(trans);
 			}
 			else {
-				std::cout << total.bookNo << " " << total.units_sold
+				std::cout << total.isbn() << " " << total.units_sold
 					<< " " << total.revenue << " ";
 				if (total.units_sold != 0) {
 					std::cout << total.revenue / total.units_sold << std::endl;
@@ -22,12 +21,10 @@ int main() {
 				else {
 					std::cout << "(no sales)" << std::endl;
 				}
-				total.bookNo = trans.bookNo;
-				total.units_sold = trans.units_sold;
-				total.revenue = trans.revenue;
+				total = trans;
 			}
 		}
-		std::cout << total.bookNo << " " << total.units_sold
+		std::cout << total.isbn() << " " << total.units_sold
 			<< " " << total.revenue << " ";
 		if (total.units_sold != 0) {
 			std::cout << total.revenue / total.units_sold << std::endl;

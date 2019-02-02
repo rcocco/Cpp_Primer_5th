@@ -15,7 +15,7 @@ int main() {
 			trans.revenue = trans.units_sold * price;
 			if (total.bookNo == trans.bookNo) {
 				total.units_sold += trans.units_sold;
-				total.revenue = trans.revenue;
+				total.revenue += trans.revenue;
 			}
 			else {
 				std::cout << total.bookNo << " " << total.units_sold
