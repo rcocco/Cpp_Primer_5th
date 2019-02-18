@@ -2,15 +2,8 @@
 #define SCREEN_H
 #include <iostream>
 #include <string>
-//template <std::string::size_type, std::string::size_type> class Screen;
-//template <std::string::size_type ht, std::string::size_type wd>
-//std::ostream &operator<<(std::ostream &, const Screen<ht, wd> &);
-//template <std::string::size_type ht, std::string::size_type wd>
-//std::istream &operator>>(std::istream &, Screen<ht, wd> &);
 template <std::string::size_type ht,std::string::size_type wd>
 class Screen {
-	//friend std::ostream &operator<< <ht,wd>(std::ostream &, const Screen<ht, wd> &);
-	//friend std::istream &operator>> <ht,wd>(std::istream &, Screen<ht, wd> &);
 public:
 	typedef std::string::size_type pos;
 	Screen(char c = ' ') : contents(ht * wd,c) { }
