@@ -22,7 +22,7 @@ ostream &operator<<(ostream &os, const Sales_data &item) {
 }
 Sales_data operator+(const Sales_data &lhs, const Sales_data &rhs) {
 	Sales_data sum = lhs;
-	sum += lhs;
+	sum += rhs;
 	return sum;
 }
 Sales_data &Sales_data::operator=(const std::string &isbn) {
