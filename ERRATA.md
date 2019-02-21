@@ -64,3 +64,8 @@
 - debug_rep(const string*&)，由第一个版本的 debug_rep 实例化而来，T 被绑定到 string*。
 + debug_rep(const string * const &)，由第一个版本的 debug_rep 实例化而来，T 被绑定到 const string*。
 ```
+19.1.1 节第 727 页：
+```diff
+- void *operator delete
++ void operator delete
+```
